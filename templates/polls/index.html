@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Polls</title>
+</head>
+<body>
+{#{% for question in questions %}#}
+{#{{ question.question_text }}#}
+{#{% endfor %}#}
+{% for choice in choices %}
+    {{ choice.choice_text }}
+    {{ choice.question.question_text }}
+{% endfor %}
+</body>
+</html>
